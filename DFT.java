@@ -9,7 +9,7 @@ public static double[] DFT(double data[],int harmonics){
         realX[0]=0;
         imgX[0]=0;
 
-        for(int k=1;k<8;k++){
+        for(int k=0;k<harmonics;k++){
 
             for(int n=0;n<size;n++){
 
