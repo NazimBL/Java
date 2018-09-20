@@ -1,3 +1,22 @@
+public class Location {
+
+    double max;
+    int i,j;
+        
+    public Location(){
+    max=0;
+    i=0;
+    j=0;
+    }
+        
+    public Location(int i,int j,double m){
+        this.i=i;
+        this.j=j;
+        this.max=m;
+
+    }
+}
+
 void maxTest(){
 
         int n=maxInt(26,33,1,16);
