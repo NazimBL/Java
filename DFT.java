@@ -13,11 +13,9 @@ public static double[] DFT(double data[],int harmonics){
 
             for(int n=0;n<size;n++){
 
-                double cos=2*Math.PI*n*k/size;
-                cos=Math.cos(cos);
-
-                double sin=2*Math.PI*n*k/size;
-                sin=Math.sin(sin);
+                double arg=2*Math.PI*n*k/size;
+                cos=Math.cos(arg);
+                sin=Math.sin(arg);
 
                 realX[k]+=(data[n]*cos);
                 imgX[k]+=(data[n]*sin);
