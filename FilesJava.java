@@ -1,4 +1,7 @@
- String sourcePath="D:\\source.dat";
+
+public void writeexample {
+ 
+String sourcePath="D:\\source.dat";
  String targetPath="D:\\target.txt";
 
     File sourceFile=new File(sourcePath);
@@ -22,3 +25,17 @@
                 System.out.println(e.toString());
             }
         }else System.out.println("Source ile doesn't exist , check your path string");
+
+}
+
+ public void readexample(File file) throws Exception{
+        FileInputStream inputStream=new FileInputStream(file);
+        System.out.println(inputStream.available());
+        byte[] bytes=new byte[inputStream.available()];
+
+        System.out.println(inputStream.read(bytes,0,inputStream.available()));
+        for(int i=0;i<bytes.length;i++){
+            System.out.print((char)bytes[i]);
+        }
+    }
+
