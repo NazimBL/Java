@@ -17,6 +17,58 @@ public class Location {
     }
 }
 
+ public static void convertToArray(int number){
+        byte i=0;
+        int[] array=new int[10];
+        while(number>0){
+            array[i]=number%10;
+            number/=10;
+            System.out.println(array[i]);
+            i++;
+        }
+    }
+    public static int digitOccurence(int number,int n){
+
+        int temp,count=0;
+        while(number>0){
+            temp=number%10;
+            if(temp==n)count++;
+            number/=10;
+        }
+        return count;
+    }
+    public static int[][] makeMat(int n,int m){
+        Scanner sc=new Scanner(System.in);
+        int [][] matrix=new int[n][m];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                matrix[i][j]=sc.nextInt();
+                System.out.println(matrix[i][j]);
+            }
+        }
+        return matrix;
+
+    }
+    public static int[][] multMat(int[][] matrix1,int[][] matrix2,int size){
+
+        int[][] matrix3=new int[size][size];
+        for(int i=0;i<size;i++){
+            for(int j=0;j<size;j++){
+                for(int k=0;k<size;k++){
+                    matrix3[i][j]+=matrix1[k][j]*matrix2[i][k];
+                }
+            }
+        }
+     return matrix3;
+    }
+    public static void showMat(int[][] matrix){
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix.length;j++){
+                System.out.println(matrix[i][j]);
+            }
+        }
+    }
+
 void maxTest(){
 
         int n=maxInt(26,33,1,16);
