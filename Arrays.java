@@ -17,6 +17,49 @@ public class Location {
     }
 }
 
+public static void makeArray(int[] array,int a,int b){
+        int size=b;
+
+        for(byte i=0;i<size;i++) {
+            Random random = new Random();
+            array[i]=a+random.nextInt(size-5);
+
+        }
+
+    }
+    public static void showArray(int[] array){
+        for(byte i=0;i<array.length;i++){
+            try{
+                System.out.println(array[i]);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    public static void sortArray(int[] array){
+        int min=0;
+        for(byte i=0;i<array.length;i++) {
+
+            for (byte j = 0; j < array.length-1; j++) {
+
+                if (array[j] >array[j+1]) {
+                    min=array[j];
+                    array[j]=array[j+1];
+                    array[j+1]=min;
+                }
+            }
+        }
+
+    }
+    public static void addArray(int[] a,int[] b,int[] c){
+        if(a.length!=b.length)System.out.println("Arrays with different length !");
+        else{
+            for(byte i=0;i<a.length;i++)c[i]=a[i]+b[i];
+        }
+    }
+
  public static void convertToArray(int number){
         byte i=0;
         int[] array=new int[10];
